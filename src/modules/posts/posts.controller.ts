@@ -3,6 +3,7 @@ import { CreatePostDto } from './post.dto';
 import { DemoService } from './providers/demo/demo.service';
 import { DemoFilter } from '../../core/filters/demo.filter';
 @Controller('posts')
+// @UseFilters(DemoFilter)
 export class PostsController {
     // private readonly demoService;
 
@@ -50,7 +51,6 @@ export class PostsController {
     //     console.log(post.title);
     //     return post;
     // }
-    @UseFilters(DemoFilter)
     store(@Body() post: CreatePostDto) {
         // throw new HttpException('没有权限', HttpStatus.FORBIDDEN);
         throw new ForbiddenException('没有权限');

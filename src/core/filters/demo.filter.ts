@@ -7,7 +7,7 @@ export class DemoFilter<T> implements ExceptionFilter {
     const ctx = host.switchToHttp();
     const req = ctx.getRequest();
     const res = ctx.getResponse();
-
+    
     res
       .status(status)
       .json({

@@ -4,8 +4,8 @@ import { DemoService } from './providers/demo/demo.service';
 import { DemoFilter } from '../../core/filters/demo.filter';
 import { DemoAuthGuard } from '../../core/guards/demo-auth.guard';
 @Controller('posts')
-// @UseFilters(DemoFilter)
-@UseGuards(DemoAuthGuard)
+// @UseFilters(DemoFilter)  // part filter
+// @UseGuards(DemoAuthGuard)    // part guard
 export class PostsController {
     // private readonly demoService;
 
